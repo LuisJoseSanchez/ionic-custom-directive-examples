@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+@Directive({
+  selector: '[appShadow]'
 })
-export class HomePage {
+export class ShadowDirective {
 
-  constructor() {}
+  constructor(private element: ElementRef, private renderer: Renderer2) { }
 
+  ngOnInit() {
+    this.renderer.setStyle(this.element.nativeElement, "box-shadow", "10px 10px 5px grey");
+  }
 }
