@@ -8,10 +8,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ShadowDirective } from './directives/shadow.directive';
+// import { ShadowDirective } from './directives/shadow.directive';
 
 @NgModule({
-  declarations: [AppComponent, ShadowDirective],
+  declarations: [AppComponent], // ShadowDirective],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
